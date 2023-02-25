@@ -25,6 +25,8 @@ handler.handleReqRes = (req, res) => {
     const decoder = new StringDecoder('utf-8');
     let realData = '';
 
+    
+
     const chosenHandler = routes[trimmedPath] ? routes[trimmedPath] : notFoundHandler;
 
     chosenHandler(requestProperties, (statusCode, payload) => {
